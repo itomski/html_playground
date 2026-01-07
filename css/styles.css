@@ -1,0 +1,58 @@
+body {
+    margin: 0; /* margin: Abstand nach Außen */
+}
+
+header, nav, main, footer {
+    margin: auto; /* boxen werden mittig ausgerichtet */
+}
+
+header {
+    /*
+    background-color: #ff0000; 
+    background-color: #f00;
+    */
+    background-color: rgb(255,0,0); /* Rot/Grün/Blau */
+    height: 150px; /* Höhe gilt zuzüglich padding */
+    padding: 25px; /* padding: Abstand nach Innen */
+    width: 920px;
+}
+
+nav {
+    background-color: rgb(0,255,0);
+    padding: 10px 25px; /* höhe ergibt sich automatisch */
+    width: 920px;
+}
+
+nav ul { /* stylet nur das ul im nav element */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li { 
+    display: inline; /* li elemente werden zu inline-Elementen */
+}
+
+main {
+    background-color: rgb(0,0,255);
+    min-height: 300px; /* mindesthöhe */
+    width: 970px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+aside {
+    background-color: rgb(0,255,255);
+    min-height: 300px; /* mindesthöhe */
+    width: 470px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: rgb(255,0,255);
+    height: 150px;
+    padding: 25px;
+    box-sizing: border-box; /* Höhe gilt inklusive padding */
+    width: 970px;
+}
