@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="basics.html">Basics</a></li>
+            <li><a href="block.html">Blocktags</a></li>
+            <li><a href="inline.html">Inlinetags</a></li>
+            <li><a href="listen.html">Listen</a></li>
+            <li><a href="bilder.html">Bilder</a></li>
+        </ul>
+    </nav>
+    <main>
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <circle fill="#f00" cx="30" cy="30" r="30" />
+        </svg>
+
+        <!-- Remote -->
+        <img src="https://dummyimage.com/600x400/f00/fff" alt="Dummy">
+
+        <!-- Lokal (Relativ - Ausgehend von der Position der HTML-Datei) -->
+        <img src="docs/technologien.png" alt="Beschreibung der Web-Technologien" height="200">
+
+        <!-- Lokal (Absolut - Ausgehend vom Wurzelverzeichnis) -->
+        <img src="/docs/technologien.png" alt="Beschreibung der Web-Technologien" title="Text wird eingeblendet">
+
+        <figure>
+            <img src="docs/technologien.png" alt="Beschreibung der Web-Technologien">
+            <figcaption>Lorem ipsum dolor sit amet.</figcaption> <!-- Echte Bildunterschrift -->
+        </figure>
+
+    </main>
+</body>
+</html>
