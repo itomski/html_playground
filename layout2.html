@@ -13,6 +13,11 @@
             padding: 0; /* abstand nach innen */
         }
 
+        #stage {
+            max-width: 1024px;
+            margin: auto;
+        }
+
         * { /* Universalselektor: selektiert alls Elemente */
             box-sizing: border-box; /* Größe gilt inkl. padding und border */
         }
@@ -77,21 +82,23 @@
     </style>
 </head>
 <body>
-    <header>Kopf</header>
-    <nav id="main-nav">
-        <ul>
-            <li><a href="#">Seite 1</a></li>
-            <li><a href="#">Seite 2</a></li>
-            <li><a href="#">Seite 3</a></li>
-        </ul>
-    </nav>
-    <main>
-        <div class="col">Links</div>
-        <div class="col" id="center">Mitte</div>
-        <div class="col">Rechts</div>
-    </main>
-    <footer>
-        Fuß
-    </footer>
+    <div id="stage">
+        <header>Kopf</header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Seite 1</a></li>
+                <li><a href="#">Seite 2</a></li>
+                <li><a href="#">Seite 3</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="col">Links</div>
+            <div class="col" id="center">Mitte</div>
+            <div class="col">Rechts</div>
+        </main>
+        <footer>
+            Fuß
+        </footer>
+    </div>
 </body>
 </html>
