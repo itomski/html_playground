@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 100%;
+            color: #333;
+            margin: 0; /* abstand nach außen */
+            padding: 0; /* abstand nach innen */
+        }
+
+        * { /* Universalselektor: selektiert alls Elemente */
+            box-sizing: border-box; /* Größe gilt inkl. padding und border */
+        }
+
+        header, main .col, footer {
+            padding: 1rem;
+        }
+
+        header {
+            background-color: #f00;
+            height: 200px;
+        }
+
+        nav#main-nav {
+            background-color: #f0f;
+            overflow: hidden;
+        }
+
+        nav#main-nav ul {
+            list-style: none; /* Listenpunkte entfernen */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav#main-nav ul li {
+            float: left;
+            padding: 1rem;
+        }
+
+        nav#main-nav a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        nav#main-nav a:hover { /* wenn man mit dem Mouse drüber geht */
+            color: #ff0;
+        }
+
+
+        main {
+            background-color: #0f0;
+            min-height: 300px;
+            overflow: hidden; /* das float der Kindelemente wird automatisch beendet */
+        }
+
+        footer {
+            background-color: #00f;
+            height: 200px;
+        }
+
+        main div.col {
+            width: 30%;
+            border: 1px solid #000;
+            float: left;
+        }
+
+        #center {
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <header>Kopf</header>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#">Seite 1</a></li>
+            <li><a href="#">Seite 2</a></li>
+            <li><a href="#">Seite 3</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="col">Links</div>
+        <div class="col" id="center">Mitte</div>
+        <div class="col">Rechts</div>
+    </main>
+    <footer>
+        Fuß
+    </footer>
+</body>
+</html>
