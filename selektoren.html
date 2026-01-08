@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Tag-Selector */
+        header {
+            background-color: aquamarine;
+        }
+
+        /* mehrere Elemente */
+        main, footer {
+            padding: 25px;
+        }
+
+        /* Verschachtelte Elemente, jedes div in einem main */
+        main div {
+            border: 1px solid #aaa;
+        }
+
+        /* ein einziges Element mit der id. Es darf nur ein Elmenet pro ID verwendet werden */
+        #main-nav {
+            padding: 10px;
+            background-color: #0f0;
+        }
+
+        /* footer nav {
+            ...
+        }*/
+        /* selektiert einen belibiges Element mit der ID */
+        #sub-nav {
+            padding: 10px;
+            background-color: #ff0;
+        }
+
+        /* selektiert ein nav-Element mit der ID */
+        nav#sub-nav {
+            padding: 10px;
+            background-color: #f0f;
+        }
+
+        /* kann an beliebige Elemente gebunden werden */
+        .rot {
+            background: #f00;
+        }
+        /* seletiert nur divs mit der Klasse */
+        div.blau {
+            background: #00f;
+        }
+    </style>
+</head>
+<body>
+    <header class="blau"></header>
+
+    <nav id="main-nav"></nav>
+
+    <main>
+        <div>XYZ 1</div>
+        <div class="rot">XYZ 2</div>
+        <div class="blau">XYZ 3</div>
+    </main>
+
+    <footer>
+        <nav id="sub-nav"></nav>
+        <div class="rot">XYZ</div>
+    </footer>
+</body>
+</html>
