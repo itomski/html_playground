@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8/css/bootstrap.min.css">
+    <style>
+        #custom-form .form-control {
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Formulare</h1>
+                <form action="#" method="get" id="custom-form">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-Mail</label>
+                        <input type="email" class="form-control" name="email" id="email" required placeholder="E-Mail">
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="radio" name="anrede" id="anrede_w" value="w">
+                        <label for="anrede_w">Frau</label>
+                        <br>
+                        <input type="radio" name="anrede" id="anrede_m" value="m">
+                        <label for="anrede_m">Herr</label>
+                        <br>
+                        <input type="radio" name="anrede" id="anrede_d" value="d">
+                        <label for="anrede_d">Divers</label>
+                        <br>
+                        <input type="radio" name="anrede" id="anrede_k" value="k">
+                        <label for="anrede_k">Keine Angabe</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" required placeholder="Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="land" class="form-label">Land</label>
+                        <select name="land" id="land" class="form-select">
+                            <optgroup label="Europa">
+                                <option value="DE" selected>Deutschland</option>
+                                <option value="FR">Frankreich</option>
+                                <option value="BL">Belgien</option>
+                                <option value="IT">Italien</option>
+                                <option value="ES">Spanien</option>
+                            </optgroup>
+                            <optgroup label="Afrika">
+                                <option value="..">Sambia</option>
+                                <option value="..">Süd Afrika</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <h2>Interessen</h2>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="interessen[]" value="s" id="interessen_sport">
+                            <label for="interessen_sport" class="form-check-label">Sport</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="interessen[]" value="w1" id="interessen_wirtschaft">
+                            <label for="interessen_wirtschaft" class="form-check-label">Wirtschaft</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="interessen[]" value="p" id="interessen_politik">
+                            <label for="interessen_politik" class="form-check-label">Politik</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" name="interessen[]" value="w2" id="interessen_wissenschaft">
+                            <label for="interessen_wissenschaft" class="form-check-label">Wissenschaft</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="msg" class="form-label">Nachricht</label>
+                        <textarea name="msg" class="form-control" id="msg" rows="10"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="color" class="form-label">Farbe</label>
+                        <input type="color" name="color" id="color">
+                        <br>
+                        <label for="datum" class="form-label">Datum</label>
+                        <input type="date" class="form-control" name="datum" id="datum">
+                        <br>
+                        <label for="pass" class="form-label">Passwort</label>
+                        <input type="password" class="form-control" name="pass" id="pass">
+                        <br>
+                        <input type="hidden" name="id" id="id" value="1234">
+                    </div>
+
+                    <!-- <button type="button" disabled>Senden</button> -->
+                    <button type="submit">Senden</button>
+                    <!-- <input type="submit" value="Senden"> -->
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

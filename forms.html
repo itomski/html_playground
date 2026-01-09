@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            padding: 1rem;
+            max-width: 1024px;
+            margin: auto;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <form action="#" method="get">
+            <fieldset>
+                <legend>Persönliches</legend>
+                <div>
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="email" required placeholder="E-Mail">
+                </div>
+                <div>
+                    <input type="radio" name="anrede" id="anrede_w" value="w">
+                    <label for="anrede_w">Frau</label>
+                    <br>
+                    <input type="radio" name="anrede" id="anrede_m" value="m">
+                    <label for="anrede_m">Herr</label>
+                    <br>
+                    <input type="radio" name="anrede" id="anrede_d" value="d">
+                    <label for="anrede_d">Divers</label>
+                    <br>
+                    <input type="radio" name="anrede" id="anrede_k" value="k">
+                    <label for="anrede_k">Keine Angabe</label>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Name">
+                </div>
+            </fieldset>
+            <div>
+                <label for="land">Land</label>
+                <select name="land" id="land">
+                    <optgroup label="Europa">
+                        <option value="DE" selected>Deutschland</option>
+                        <option value="FR">Frankreich</option>
+                        <option value="BL">Belgien</option>
+                        <option value="IT">Italien</option>
+                        <option value="ES">Spanien</option>
+                    </optgroup>
+                    <optgroup label="Afrika">
+                        <option value="..">Sambia</option>
+                        <option value="..">Süd Afrika</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div>
+                <h2>Interessen</h2>
+                <input type="checkbox" name="interessen[]" value="s" id="interessen_sport">
+                <label for="interessen_sport">Sport</label>
+                <br>
+                <input type="checkbox" name="interessen[]" value="w1" id="interessen_wirtschaft">
+                <label for="interessen_wirtschaft">Wirtschaft</label>
+                <br>
+                <input type="checkbox" name="interessen[]" value="p" id="interessen_politik">
+                <label for="interessen_politik">Politik</label>
+                <br>
+                <input type="checkbox" name="interessen[]" value="w2" id="interessen_wissenschaft">
+                <label for="interessen_wissenschaft">Wissenschaft</label>
+            </div>
+
+            <div>
+                <label for="msg">Nachricht</label>
+                <textarea name="msg" id="msg" rows="10"></textarea>
+            </div>
+
+            <div>
+                <label for="color">Farbe</label>
+                <input type="color" name="color" id="color">
+                <br>
+                <label for="datum">Datum</label>
+                <input type="date" name="datum" id="datum">
+                <br>
+                <label for="pass">Passwort</label>
+                <input type="password" name="pass" id="pass">
+                <br>
+                <input type="hidden" name="id" id="id" value="1234">
+            </div>
+
+            <!-- <button type="button" disabled>Senden</button> -->
+            <button type="submit">Senden</button>
+            <!-- <input type="submit" value="Senden"> -->
+        </form>
+    </main>
+</body>
+</html>
