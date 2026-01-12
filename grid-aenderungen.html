@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /*grid-template-rows: 20% auto 20%;*/
+            grid-template-rows: repeat(3, 1fr);
+            height: 500px;
+        }
+        
+        .grid-container > * { /* selektiert alle direkten Kind-Elemente */
+            border: 1px solid #f00;
+        }
+
+        .grid-container > :first-child {
+            background-color: #00f;
+            grid-column-start: 1; /* von */
+            grid-column-end: 4; /* bis */
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+        .grid-container > main {
+            background-color: #f00;
+            grid-column-start: 1; /* von */
+            grid-column-end: 3; /* bis */
+            
+        }
+
+        .grid-container > aside {
+            background-color: #f0f;
+            grid-column-start: 3; /* wenn nicht angegeben, wird es automatisch ermittelt */
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .grid-container > :last-child { /* selektiert das letzte Element */
+            background-color: #ff0;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="grid-container">
+        <header class="item">1</header>
+        <main class="item">2</main>
+        <aside class="item">7</aside>
+        <footer class="item">
+            <h1>Moin</h1>
+            <div>Text</div>
+        </footer>
+    </div>
+
+    <div>Hallo</div>
+    
+</body>
+</html>
