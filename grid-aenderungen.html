@@ -7,12 +7,22 @@
 
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;;
+            margin: 0;
+        }
+
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             /*grid-template-rows: 20% auto 20%;*/
             grid-template-rows: repeat(3, 1fr);
-            height: 500px;
+            gap: 10px;
+            height: 100%;
         }
         
         .grid-container > * { /* selektiert alle direkten Kind-Elemente */
