@@ -1,0 +1,99 @@
+@red: #F24405;
+@green: #22BABB;
+@light-gray: #9EF8EE;
+@gray: #FA7F08;
+@dark-gray: #348888;
+@std-p: 1rem;
+@full-vw: 100vw;
+@full-vh: 100vw;
+@half: 0.5;
+
+main {
+    width: @full-vw;
+    height: @full-vh;
+    box-sizing: border-box;
+
+    div {
+        border: 1px solid @red; /* Bla bla bla */
+        width: 200px - 10px; // Bla bla bla
+        height: 200px * @half;
+        box-sizing: border-box;
+
+        .green {
+            border-color: @green;
+        }
+    }
+}
+
+// > direkt Child-Selektor
+// div > a
+
+// + angrenzend Geschwister-Selektor
+// header + nav
+
+// ~ allgemeiner Geschwister-Selektor
+// header ~ nav
+
+// Navigation
+nav {
+    padding: @std-p;
+    background-color: @light-gray;
+    ul, ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            a {
+                color: @dark-gray;
+                &:hover { // Wird an das a drangehängt
+                    color: @gray;
+                }
+                &:visited {
+                    color: @green;
+                }
+            }
+        }
+    }
+}
+
+.block() { // wiederverwendbarer Block (Mixin). () unterdrückt die Kompilierung
+    height: 20vh;
+    width: 100vw;
+}
+
+.quadrat(@size) { // Funktion Deklaration
+    height: @size;
+    width: @size;
+}
+
+.rechteck(@w, @h) { // Funktion Deklaration
+    height: @h;
+    width: @w;
+}
+
+.std-rechteck(@w: 200px, @h: 50px) { // Funktion Deklaration mit Defaultwerten
+    height: @h;
+    width: @w;
+}
+
+footer {
+    &.red {
+        .block; // Mixin wird eingebunden
+        background-color: @red;
+    }
+    &.green {
+        // .quadrat(500px); // Verwendung einer Funktion
+        // .rechteck(500px, 50px); // Verwendung einer Funktion
+        .std-rechteck(100vw);
+        background-color: @green;
+    }
+}
+
+.good-border(@w, @s, @c) {
+    border: @arguments; // Alle Parameter werden eingebunden
+}
+
+.red-border {
+    .good-border(1px, solid, @red);
+}
