@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #bilder1 {
+            width: 100vw;
+            height: 50vh;
+            background-image: url(/img/leo.png), url(/img/affe.png), url(/img/hippo.png);
+            /*background-position-x: 0px;*/ /* gilt für beide Bilder */
+            background-position-x: left, center, right;
+            background-position-y: 0px; /* erstes, zweites */
+            background-repeat: no-repeat;
+            transition: all 3s linear; /* Animation für Änderung der Eigenschaften */
+        }
+
+        #bilder1:hover {
+            background-position-x: right, left, center;
+            transition: all 3s linear; /* Animation für Änderung der Eigenschaften */
+        }
+
+        #circle {
+            background-color: #333;
+            height: 200px;
+            width: 200px;
+            border: 4px solid #fff;
+            box-shadow: 0 0 5px #000;
+            border-radius: 50%;
+            overflow: hidden; /* Nur der vorgegebene Bereich wird angezeigt */
+        }
+
+        #circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center bottom;
+        }
+
+        #circle img:hover {
+            filter: blur(5px);
+            transition: all 2s linear;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="bilder1"></div>
+    </main>
+    <footer>
+        <figure id="circle">
+            <img src="/img/istockphoto-1322277517-1024x1024.jpg" alt="Feld">
+        </figure>
+    </footer>
+
+    
+</body>
+</html>

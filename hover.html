@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: #333 url(/img/istockphoto-1322277517-1024x1024.jpg) no-repeat;
+            /* background-image: image-set(url(/img/einfach.jpg) 1x, url(/img/retina.jpg) 2x, url(/img/top.jpg) 3x); */
+            background-size: cover;
+            height: 100%;
+        }
+
+        @media (min-width: 800px) {
+            body {
+                background-image: url(/img/istockphoto-2130934199-1024x1024.jpg);
+            }
+        }
+
+        #lamp {
+            width: 200px;
+            height: 200px;
+            background: url(/img/istockphoto-1385095752-1024x1024.png) -50px -45px no-repeat;
+            border: 1px solid #000;
+        }
+
+        #lamp:hover {
+            background-position: -262px -45px;
+        }
+
+        #lamp2 {
+            width: 200px;
+            height: 200px;
+            background: url(/img/istockphoto-1385095752-1024x1024.png) -50px -45px no-repeat;
+            border: 1px solid #000;
+            animation: bulb 5s linear infinite;
+        }
+
+        @keyframes bulb {
+            from { /* start */
+                background-position: 0px -45px;
+            }
+            to { /* ende */
+                background-position: -312px -45px;
+            }
+        }
+
+        #heart {
+            color: #f00;
+            font-size: 1rem;
+            animation: heartbeat 1s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { 
+                font-size: 1rem;
+            }
+            25% { 
+                font-size: 1.2rem;
+            }
+            50% { 
+                font-size: 1rem;
+            }
+            75% { 
+                font-size: 1.2rem;
+            }
+            100% { 
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="lamp"></div>
+
+        <div id="lamp2"></div>
+
+        <div>
+            <i class="fa fa-heart" aria-hidden="true" id="heart"></i>
+        </div>
+    </main>
+</body>
+</html>
