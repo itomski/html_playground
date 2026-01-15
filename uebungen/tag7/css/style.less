@@ -1,0 +1,104 @@
+@light: #DDE0D9;
+@dark: #1C1D1C;
+@light-blue: #9AC1D0;
+@blue: #4F729A;
+@light-green: #89A666;
+@green: #2F591C;
+
+@import "fonts.less";
+
+html, body {
+    font-size: 100%;
+    color: @dark;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto Flex', sans-serif;
+    background-color: @light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav#main-nav {
+    position: sticky;
+    top: 0;
+    background-color: rgba(@light, 0.8);
+
+    ul {
+        list-style: none;
+        li {
+            display: inline-block;
+            padding: 0.2rem;
+            a {
+                color: @dark;
+                font-weight: 600;
+                text-decoration: none;
+                transition: all 0.25s linear;
+                &:hover {
+                    color: lighten(@dark, 30%);
+                }
+            }
+        }
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    flex-wrap: wrap;
+    margin: auto;
+
+    .full {
+        width: 100%;
+    }
+
+    .half {
+        width: 50%;
+    }
+
+    .third {
+        width: 33%;
+    }
+
+    .quarter {
+        width: 25%;
+    }
+}
+
+.dark {
+    background-color: @dark;
+    color: @light;
+    a {
+        color: @light;
+    }
+}
+
+.light-blue {
+    background: @light-blue;
+}
+
+.pt {
+    padding-top: 2rem;
+}
+
+button {
+    background: @green;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    color: @light;
+    font-size: 1rem;
+    font-weight: 800;
+    transition: all 0.25s linear, ;
+    border: 1px solid @green;
+    &:hover {
+        background-color: @light;
+        color: @dark;
+    }
+}
+
+@import "forms.less";
