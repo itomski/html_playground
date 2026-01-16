@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            /* Variablen */
+            --normal: #ff0;
+            --selected: #f00;
+            --border: #333;
+        }
+
+        html {
+            font-size: 100%;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            display: flex;
+            width: 850px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: var(--normal);
+            padding: 1rem;
+            border: 1px solid var(--border);
+            margin-bottom: 1rem;
+            transition: all 1s linear;
+        }
+
+        .selected {
+            background-color: var(--selected);
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+        <main>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </main>
+
+    <script>
+        function selectItem(element) {
+            element.classList.toggle('selected');
+        }
+
+        // Liefert eine Liste aller Elemente mit der class box
+        // Fügt automatisch zu jedem Element ein Click-Aktion hinzu
+        let boxen = document.getElementsByClassName('box');
+        for(i = 0; i < boxen.length; i++) {
+            boxen[i].addEventListener('click', function() {
+                selectItem(this);
+            });
+        }
+
+    </script>
+
+</body>
+</html>

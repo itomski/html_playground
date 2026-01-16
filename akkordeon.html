@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 100%;
+        }
+
+        main {
+            width: 500px;
+        }
+
+        .accordion {
+            padding: 1rem;
+            background-color: #333;
+            color: #eee;
+            width: 100%;
+            transition: all 0.5s;
+            border: none;
+            outline: none;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .active, .accordion:hover {
+            background-color: #777;
+        }
+
+        .accordion-panel {
+            padding: 1rem;
+            display: none;
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore eaque sequi alias culpa provident id facilis nulla reiciendis unde!</p>
+        </div>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore eaque sequi alias culpa provident id facilis nulla reiciendis unde!</p>
+        </div>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore eaque sequi alias culpa provident id facilis nulla reiciendis unde!</p>
+        </div>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore eaque sequi alias culpa provident id facilis nulla reiciendis unde!</p>
+        </div>
+        <button class="accordion">Moin Moin</button>
+        <div class="accordion-panel">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga labore eaque sequi alias culpa provident id facilis nulla reiciendis unde!</p>
+        </div>
+    </main>
+
+    <script>
+        let buttons = document.getElementsByClassName('accordion');
+
+        for(i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', function() {
+                // this = button, der gerade angeklickt wird
+                this.classList.toggle('active');
+                let panel = this.nextElementSibling; // Nachfolgeelement
+                panel.classList.toggle('show');
+            });
+        }
+
+
+    </script>
+
+</body>
+</html>
